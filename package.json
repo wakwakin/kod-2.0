@@ -3,10 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "configurations": "tsc -p tsconfig.node.json && node compiler/configurations.js",
+    "start": "yarn configurations"
   },
   "prettier": {
     "printWidth": 100,
@@ -33,10 +31,15 @@
     "zone.js": "~0.15.0"
   },
   "devDependencies": {
+    "@angular-builders/custom-webpack": "^20.0.0",
     "@angular/build": "^20.3.3",
     "@angular/cli": "^20.3.3",
     "@angular/compiler-cli": "^20.3.0",
+    "@types/cross-spawn": "^6.0.6",
     "@types/jasmine": "~5.1.0",
+    "cross-spawn": "^7.0.6",
+    "dotenv": "^17.2.3",
+    "inquirer": "^12.9.6",
     "jasmine-core": "~5.9.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",

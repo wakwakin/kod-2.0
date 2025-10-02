@@ -9,4 +9,8 @@ import { RouterOutlet } from '@angular/router';
 })
 export class App {
   protected readonly title = signal('kod-2.0');
+
+  constructor() {
+    console.log(PUBLIC)
+  }
 }

@@ -41,3 +41,6 @@ __screenshots__/
 # System files
 .DS_Store
 Thumbs.db
+
+# Compiler for setting up brand and environment specific configurations
+/compiler
